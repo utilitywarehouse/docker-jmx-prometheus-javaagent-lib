@@ -8,5 +8,5 @@ ENV JAR=jmx_prometheus_javaagent-$VERSION.jar
 
 RUN curl -L https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/$VERSION/$JAR -o /lib/$JAR
 
-FROM scratch
+FROM alpine:3.22
 COPY --from=tmp /lib /lib
